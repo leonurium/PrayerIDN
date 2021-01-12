@@ -1,0 +1,22 @@
+{
+  "name": "PrayerIDN",
+  "version": "0.1.0",
+  "summary": "A short description of PrayerIDN.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/ranggaleoo/PrayerIDN",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "ranggaleoo": "leorangga30@ymail.com"
+  },
+  "source": {
+    "git": "https://github.com/ranggaleoo/PrayerIDN.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "PrayerIDN/Src/**/*"
+}

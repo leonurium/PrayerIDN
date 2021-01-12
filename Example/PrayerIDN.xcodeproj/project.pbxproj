@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		31A9D722A316AD0E21B08A21 /* PrayerIDN.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = PrayerIDN.podspec; path = ../PrayerIDN.podspec; sourceTree = "<group>"; };
+		31A9D722A316AD0E21B08A21 /* PrayerIDN.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PrayerIDN.podspec; path = ../PrayerIDN.podspec; sourceTree = "<group>"; };
 		3533473D9E25D19B9F67F4AC /* Pods_PrayerIDN_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrayerIDN_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C348DBA3A40D3D4FD6DBABC /* Pods-PrayerIDN_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrayerIDN_Tests.release.xcconfig"; path = "Target Support Files/Pods-PrayerIDN_Tests/Pods-PrayerIDN_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* PrayerIDN_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrayerIDN_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,8 +41,8 @@
 		607FACE51AFB9204008FA782 /* PrayerIDN_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrayerIDN_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		84BAA838C7072D55016D1EA2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		87CD8319D58181DDDF964B91 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		84BAA838C7072D55016D1EA2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		87CD8319D58181DDDF964B91 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		932414DD5479EF015E524DA9 /* Pods-PrayerIDN_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrayerIDN_Example.debug.xcconfig"; path = "Target Support Files/Pods-PrayerIDN_Example/Pods-PrayerIDN_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A3ACD1CE42A89311EEA47A1E /* Pods-PrayerIDN_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrayerIDN_Example.release.xcconfig"; path = "Target Support Files/Pods-PrayerIDN_Example/Pods-PrayerIDN_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B586B9284B93F5FA1944F038 /* Pods-PrayerIDN_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrayerIDN_Tests.debug.xcconfig"; path = "Target Support Files/Pods-PrayerIDN_Tests/Pods-PrayerIDN_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -147,7 +147,6 @@
 				B586B9284B93F5FA1944F038 /* Pods-PrayerIDN_Tests.debug.xcconfig */,
 				3C348DBA3A40D3D4FD6DBABC /* Pods-PrayerIDN_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -171,7 +170,7 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				71938910CD2437410CBC746A /* [CP] Embed Pods Frameworks */,
+				790EA19CEB41A2A136EBB017 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -213,10 +212,12 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = VC83XAQ3UM;
 						LastSwiftMigration = 0900;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = VC83XAQ3UM;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -227,6 +228,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -284,7 +286,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		71938910CD2437410CBC746A /* [CP] Embed Pods Frameworks */ = {
+		790EA19CEB41A2A136EBB017 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -478,6 +480,7 @@
 			baseConfigurationReference = 932414DD5479EF015E524DA9 /* Pods-PrayerIDN_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VC83XAQ3UM;
 				INFOPLIST_FILE = PrayerIDN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -493,6 +496,7 @@
 			baseConfigurationReference = A3ACD1CE42A89311EEA47A1E /* Pods-PrayerIDN_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VC83XAQ3UM;
 				INFOPLIST_FILE = PrayerIDN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -507,6 +511,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B586B9284B93F5FA1944F038 /* Pods-PrayerIDN_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = VC83XAQ3UM;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -529,6 +534,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3C348DBA3A40D3D4FD6DBABC /* Pods-PrayerIDN_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = VC83XAQ3UM;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
 					"$(inherited)",

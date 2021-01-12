@@ -1,0 +1,16 @@
+PODS:
+  - PrayerIDN (0.1.0)
+
+DEPENDENCIES:
+  - PrayerIDN (from `../`)
+
+EXTERNAL SOURCES:
+  PrayerIDN:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  PrayerIDN: e11f0b04573d776c66f23f42343190bc8ab8a4f1
+
+PODFILE CHECKSUM: 6a16694c5cf0eeb69c417685c490e26935d232d2
+
+COCOAPODS: 1.10.0

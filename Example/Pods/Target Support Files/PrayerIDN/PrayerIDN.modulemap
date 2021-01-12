@@ -1,0 +1,6 @@
+framework module PrayerIDN {
+  umbrella header "PrayerIDN-umbrella.h"
+
+  export *
+  module * { export * }
+}

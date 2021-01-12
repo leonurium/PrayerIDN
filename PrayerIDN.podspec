@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '9.0'
 
-  s.source_files = 'PrayerIDN/Classes/**/*'
+  s.source_files = 'PrayerIDN/Src/**/*'
   
   # s.resource_bundles = {
   #   'PrayerIDN' => ['PrayerIDN/Assets/*.png']

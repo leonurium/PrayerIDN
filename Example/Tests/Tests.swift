@@ -1,5 +1,4 @@
 import XCTest
-import PrayerIDN
 
 class Tests: XCTestCase {
     
