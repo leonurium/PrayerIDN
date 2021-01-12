@@ -43,6 +43,8 @@ public class PrayerIDN: NSObject {
     public weak var delegate: PrayerDelegate?
     private var coordinate: Coordinate
     private var requestDate: DateComponents
+    private var timer : Timer?
+    private var isAllowRequest: Bool = true
     public var times: Times? {
         didSet {
             if let time = self.times {
@@ -56,12 +58,11 @@ public class PrayerIDN: NSObject {
         self.requestDate = date
         super.init()
         locationManager.delegate = self
-        let location = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
-        getPlace(for: location) { (placemark) in
-            if let city = placemark?.locality {
-                self.getCode(cityName: city)
-            }
-        }
+        timer = Timer(timeInterval: 300, target: self, selector: #selector(didChangeTime), userInfo: nil, repeats: true)
+    }
+    
+    @objc private func didChangeTime() {
+        isAllowRequest = true
     }
     
     private func getCode(cityName: String) {
@@ -113,14 +114,21 @@ public class PrayerIDN: NSObject {
             }
         }
     }
+    
+    deinit {
+        timer?.invalidate()
+    }
 }
 
 extension PrayerIDN: CLLocationManagerDelegate {
     public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.last else { return }
-        getPlace(for: location) { (placemark) in
-            if let city = placemark?.locality {
-                self.getCode(cityName: city)
+        if isAllowRequest {
+            isAllowRequest = false
+            getPlace(for: location) { (placemark) in
+                if let city = placemark?.locality {
+                    self.getCode(cityName: city)
+                }
             }
         }
     }

@@ -7,34 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10055D1AD03477330B96FDC5B7F81F2A /* HTTPRequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C756021F2266DC3A8454F7DE83E7EA35 /* HTTPRequestMethod.swift */; };
-		1AB217854AEDEC47B0775D7FBBF487C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		1CD241E700B0C61EC6462980E9E41303 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053E7EB5DC4A551DE82F1BD2A301102 /* HTTPRequest.swift */; };
-		3F46510B513B2CB0C3D672DBF9937D36 /* Debugger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA01FADFD8C94217A9F689D9A96898B /* Debugger.swift */; };
+		284139D77F806B804BCB651A0031ADE2 /* HTTPRequestHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F8C00915431C213F996901F7883B30C /* HTTPRequestHeader.swift */; };
+		4C78CB44A2A041182983D5C596F29DB5 /* DateComponents+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A39A8E0D953AC2C141D780F9939856D0 /* DateComponents+String.swift */; };
+		54A7B7499770FAF89979828E8968B4E1 /* Debugger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905B21DD98A3D875BD622AD49C9637A9 /* Debugger.swift */; };
+		57A5611BFEE3335E1D8FA1A88F84BC7A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		5CA2B868355FBDEADB463FD9340C1B85 /* PrayerWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3807742921EEF8BA6E2C1EBA52F2E60 /* PrayerWorker.swift */; };
 		5E40494E2A1F4A6730D25F9019D69656 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		5F69E086DAE87312768FB8F651099D36 /* PrayerIDN-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 77808347B59DC9C6922DE0F5BCF0EC03 /* PrayerIDN-dummy.m */; };
-		66C13B7B3F40FC054F6FB5EBD6F37B4C /* PrayerIDN.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57648818F898AE492C3DFE66206E8D41 /* PrayerIDN.swift */; };
 		71E126C644F86AC4CDAA834F78117A83 /* Pods-PrayerIDN_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 246AFC46A51E34A6787672220243DE99 /* Pods-PrayerIDN_Tests-dummy.m */; };
 		75D1BAE1F345B757BA0D765FB2156120 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		7630F1BF2E185C2745A913D530181B2A /* Pods-PrayerIDN_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 61DBE3B13B61AC1965388EA684719431 /* Pods-PrayerIDN_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		85435B340B1FDB9FB7266584B44A0CDC /* HTTPRequestHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01AE6E129D0277AFA48B5A67597BF713 /* HTTPRequestHeader.swift */; };
 		94CCAFE6EA95EC67F479BE0E2D3BF46D /* Pods-PrayerIDN_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F311FA099B24B8126917209BA24D847C /* Pods-PrayerIDN_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AAAD45CF25ADF0AF00F52F7F /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAD45CE25ADF0AF00F52F7F /* String+Ext.swift */; };
-		AAAD45D425ADF0C600F52F7F /* DateComponents+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAD45D325ADF0C600F52F7F /* DateComponents+String.swift */; };
-		D647C370109CFAE4882B2D0056E2409F /* PrayerWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E477369688EA554B0F8A025C671A95E2 /* PrayerWorker.swift */; };
-		DC32478B20ED11A5D3F04260BCE06C7D /* PrayerIDN-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 775133C46B8388364C8869D7D0151923 /* PrayerIDN-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9575FB7CA0AE4A8D76D430BBAAE6730 /* PrayerIDN-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D7BB6448621BF430F16AB99BDAE2EE /* PrayerIDN-dummy.m */; };
+		A9A7C656EC9BFBDDE51474E9BAA478B6 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADD8AE13CF55E8D86745830C8292727 /* HTTPRequest.swift */; };
+		AE91B1CD7BC71503B9E457FCF28DC521 /* PrayerIDN-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 22920463C2FC95C7AF4BEDA4C14629ED /* PrayerIDN-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB81287F27FC5BCE9DB8D2CF7CBF2BFB /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E02711EC5F123300AB998E426BA5E3 /* String+Ext.swift */; };
+		BFE5EDBF53C3FC88369831102A37CA8E /* HTTPRequestMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3336A39714BD3797236BDC3604BF879 /* HTTPRequestMethod.swift */; };
+		E4101FA194637C113B731A1B5D676D47 /* PrayerIDN.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBA60FEABD6C06BF8181D8EA0D1D2D13 /* PrayerIDN.swift */; };
 		F48B73169E4A1999A4416EE16BBDB248 /* Pods-PrayerIDN_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB2BFB6D9A8C2187691B49EDE8E86F4 /* Pods-PrayerIDN_Example-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C6EB5F37DBA2B357C2DEC9A34A9CD988 /* PBXContainerItemProxy */ = {
+		0492D197A02454EF9F568F7D72817045 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = A2131386431FC6C5818588EDC848ADC0;
 			remoteInfo = "Pods-PrayerIDN_Example";
 		};
-		EA027E43F46BE3A896CBF14AAE83F53C /* PBXContainerItemProxy */ = {
+		C5D654F288DC1AB802B5CBE76AC2F062 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -44,46 +44,46 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01AE6E129D0277AFA48B5A67597BF713 /* HTTPRequestHeader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HTTPRequestHeader.swift; sourceTree = "<group>"; };
-		0EE34D823A70C5756C776A9924B27C40 /* PrayerIDN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PrayerIDN.debug.xcconfig; sourceTree = "<group>"; };
-		1014BC276C483BD2D1CD9C3EE4B06D5B /* PrayerIDN.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = PrayerIDN.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		04D60C282D8B3E3AF0B070703505FCE1 /* PrayerIDN.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PrayerIDN.modulemap; sourceTree = "<group>"; };
+		06B8F3979D10EFF228C12847DAE53F3D /* PrayerIDN.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = PrayerIDN.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		12299576B6789081B0A84A01B2FB7AAF /* Pods-PrayerIDN_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PrayerIDN_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1229FD2CE2F179D949D01CA4FE7BAA46 /* Pods-PrayerIDN_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PrayerIDN_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		15758257C7B76D5A1F26003CC6E437D8 /* Pods-PrayerIDN_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PrayerIDN_Example.modulemap"; sourceTree = "<group>"; };
-		162ED17C82674577091F3E5CE2BBB428 /* PrayerIDN-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PrayerIDN-Info.plist"; sourceTree = "<group>"; };
 		1C5480528239100934F19C01299AF366 /* Pods-PrayerIDN_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PrayerIDN_Example-Info.plist"; sourceTree = "<group>"; };
+		22920463C2FC95C7AF4BEDA4C14629ED /* PrayerIDN-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PrayerIDN-umbrella.h"; sourceTree = "<group>"; };
 		246AFC46A51E34A6787672220243DE99 /* Pods-PrayerIDN_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PrayerIDN_Tests-dummy.m"; sourceTree = "<group>"; };
-		2C38CAC3FE5B71307814AD59520037BB /* PrayerIDN.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PrayerIDN.modulemap; sourceTree = "<group>"; };
 		3B4F86A76503539683D63F271B3B54CF /* Pods-PrayerIDN_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PrayerIDN_Tests-Info.plist"; sourceTree = "<group>"; };
 		3BB6127786114177FE6D2E83741E19BD /* Pods-PrayerIDN_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrayerIDN_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		4CCE7A9B94A367BF8D8E0D61293BC0B9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		57648818F898AE492C3DFE66206E8D41 /* PrayerIDN.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PrayerIDN.swift; path = PrayerIDN/Src/PrayerIDN.swift; sourceTree = "<group>"; };
+		46D7BB6448621BF430F16AB99BDAE2EE /* PrayerIDN-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PrayerIDN-dummy.m"; sourceTree = "<group>"; };
 		61DBE3B13B61AC1965388EA684719431 /* Pods-PrayerIDN_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PrayerIDN_Tests-umbrella.h"; sourceTree = "<group>"; };
 		6FB0B8661E4973F5DCD7D7C18860194E /* Pods-PrayerIDN_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PrayerIDN_Tests.modulemap"; sourceTree = "<group>"; };
 		7208EAE9B4D19F5BEFAD8BDFBA5B9C89 /* Pods-PrayerIDN_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PrayerIDN_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		748379C6A66BF3541FA2D37C86225080 /* Pods-PrayerIDN_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PrayerIDN_Example-frameworks.sh"; sourceTree = "<group>"; };
-		775133C46B8388364C8869D7D0151923 /* PrayerIDN-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PrayerIDN-umbrella.h"; sourceTree = "<group>"; };
-		77808347B59DC9C6922DE0F5BCF0EC03 /* PrayerIDN-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PrayerIDN-dummy.m"; sourceTree = "<group>"; };
 		7A91C6D42C7BF3809330017A9B564E2F /* Pods-PrayerIDN_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrayerIDN_Example.release.xcconfig"; sourceTree = "<group>"; };
-		7BA01FADFD8C94217A9F689D9A96898B /* Debugger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Debugger.swift; sourceTree = "<group>"; };
+		7ADD8AE13CF55E8D86745830C8292727 /* HTTPRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
 		7E1A44CD795475016D8BB8077FA7E3E9 /* Pods-PrayerIDN_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrayerIDN_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		7F2604742F06F40900A443A7DB71DD4C /* PrayerIDN-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PrayerIDN-prefix.pch"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A3AA684BEF555E151A0473DAA8894993 /* Pods_PrayerIDN_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrayerIDN_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A79C3118ADECF9A6637B2A0154D51521 /* Pods_PrayerIDN_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrayerIDN_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AAAD45CE25ADF0AF00F52F7F /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
-		AAAD45D325ADF0C600F52F7F /* DateComponents+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateComponents+String.swift"; sourceTree = "<group>"; };
-		B053E7EB5DC4A551DE82F1BD2A301102 /* HTTPRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		905B21DD98A3D875BD622AD49C9637A9 /* Debugger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Debugger.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F8C00915431C213F996901F7883B30C /* HTTPRequestHeader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HTTPRequestHeader.swift; sourceTree = "<group>"; };
+		A39A8E0D953AC2C141D780F9939856D0 /* DateComponents+String.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "DateComponents+String.swift"; sourceTree = "<group>"; };
+		A3AA684BEF555E151A0473DAA8894993 /* Pods_PrayerIDN_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PrayerIDN_Example.framework; path = "Pods-PrayerIDN_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A79C3118ADECF9A6637B2A0154D51521 /* Pods_PrayerIDN_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PrayerIDN_Tests.framework; path = "Pods-PrayerIDN_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7E02711EC5F123300AB998E426BA5E3 /* String+Ext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		B082602F29C13EE8C5062943E19443D8 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		B3807742921EEF8BA6E2C1EBA52F2E60 /* PrayerWorker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PrayerWorker.swift; sourceTree = "<group>"; };
 		B5E78C287FD730CC3572C4E9BDF27AD1 /* Pods-PrayerIDN_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PrayerIDN_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		BEB2BFB6D9A8C2187691B49EDE8E86F4 /* Pods-PrayerIDN_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PrayerIDN_Example-dummy.m"; sourceTree = "<group>"; };
+		BEE2E57417BC0A6C5EF57A8A2D5F63F3 /* PrayerIDN-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PrayerIDN-Info.plist"; sourceTree = "<group>"; };
 		C05CD7242A07C61D63476CDFC2DF4DA1 /* Pods-PrayerIDN_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PrayerIDN_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		C3810B0D1FD440C72574BE62661B6BE7 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		C756021F2266DC3A8454F7DE83E7EA35 /* HTTPRequestMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HTTPRequestMethod.swift; sourceTree = "<group>"; };
-		E477369688EA554B0F8A025C671A95E2 /* PrayerWorker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PrayerWorker.swift; sourceTree = "<group>"; };
-		EF6D8CCD7DCD313C9E16E51421560B4C /* PrayerIDN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PrayerIDN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C81BE10F11140797DC26C6A544349B92 /* PrayerIDN-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PrayerIDN-prefix.pch"; sourceTree = "<group>"; };
+		CBC87B1DFB0BB0EFE5C47A05B3A3B2D6 /* PrayerIDN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PrayerIDN.release.xcconfig; sourceTree = "<group>"; };
+		D07B2267DEFF1C56E5E5C39FF8100CDC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		E2837FB1B07714035A9320C04B0C9457 /* PrayerIDN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PrayerIDN.debug.xcconfig; sourceTree = "<group>"; };
+		E3336A39714BD3797236BDC3604BF879 /* HTTPRequestMethod.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HTTPRequestMethod.swift; sourceTree = "<group>"; };
+		EBA60FEABD6C06BF8181D8EA0D1D2D13 /* PrayerIDN.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PrayerIDN.swift; path = PrayerIDN/Src/PrayerIDN.swift; sourceTree = "<group>"; };
+		EF6D8CCD7DCD313C9E16E51421560B4C /* PrayerIDN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PrayerIDN.framework; path = PrayerIDN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F311FA099B24B8126917209BA24D847C /* Pods-PrayerIDN_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PrayerIDN_Example-umbrella.h"; sourceTree = "<group>"; };
-		F93D21EB726904A919A12F0D956D37E8 /* PrayerIDN.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PrayerIDN.release.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +95,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		59DF1E5DAD006A1896E866AE06BC8864 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57A5611BFEE3335E1D8FA1A88F84BC7A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7DC948FB204ABF64F1A49F208CD8D4A0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -103,24 +111,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B33079F0E658E97E7D0AA1BDB36C91EC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1AB217854AEDEC47B0775D7FBBF487C9 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		039675675AB1018126CE06DBBC7D8CD6 /* Worker */ = {
+		2BE8FC790DE71D5EFA472501BF3D4B66 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				E477369688EA554B0F8A025C671A95E2 /* PrayerWorker.swift */,
+				A39A8E0D953AC2C141D780F9939856D0 /* DateComponents+String.swift */,
+				A7E02711EC5F123300AB998E426BA5E3 /* String+Ext.swift */,
 			);
-			name = Worker;
-			path = PrayerIDN/Src/Worker;
+			name = Extensions;
+			path = PrayerIDN/Src/Extensions;
 			sourceTree = "<group>";
 		};
 		2DB003B7F1993B49A60D72FA0F16463A /* Targets Support Files */ = {
@@ -130,6 +131,23 @@
 				701F393830FF9D3A01D4B7BC5A8E0C88 /* Pods-PrayerIDN_Tests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		33EB30AEAAB16B833AE24EA84D18F47D /* Worker */ = {
+			isa = PBXGroup;
+			children = (
+				B3807742921EEF8BA6E2C1EBA52F2E60 /* PrayerWorker.swift */,
+			);
+			name = Worker;
+			path = PrayerIDN/Src/Worker;
+			sourceTree = "<group>";
+		};
+		36C2CAC352C0CD4552F864E355E50FFA /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7B9C16EAE7AE30D4350C0ACC63019B6F /* PrayerIDN */,
+			);
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		4407BD07DB724AA14DA5492A03489397 /* Pods-PrayerIDN_Example */ = {
@@ -157,44 +175,6 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		5EE1ECA449E2E64653797F6B983E7096 /* PrayerIDN */ = {
-			isa = PBXGroup;
-			children = (
-				AAAD45CD25ADF0A100F52F7F /* Extensions */,
-				57648818F898AE492C3DFE66206E8D41 /* PrayerIDN.swift */,
-				A944A011F758EB76256E2D916CDE9FA8 /* HTTPRequest */,
-				E637D5998672C3AD315F061637D5C0EF /* Pod */,
-				6050D5D99CA33FD6F9A790E5EEBCD730 /* Support Files */,
-				F55F74178B3214C430015AFDE62F1ECE /* Utils */,
-				039675675AB1018126CE06DBBC7D8CD6 /* Worker */,
-			);
-			name = PrayerIDN;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		6050D5D99CA33FD6F9A790E5EEBCD730 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				2C38CAC3FE5B71307814AD59520037BB /* PrayerIDN.modulemap */,
-				77808347B59DC9C6922DE0F5BCF0EC03 /* PrayerIDN-dummy.m */,
-				162ED17C82674577091F3E5CE2BBB428 /* PrayerIDN-Info.plist */,
-				7F2604742F06F40900A443A7DB71DD4C /* PrayerIDN-prefix.pch */,
-				775133C46B8388364C8869D7D0151923 /* PrayerIDN-umbrella.h */,
-				0EE34D823A70C5756C776A9924B27C40 /* PrayerIDN.debug.xcconfig */,
-				F93D21EB726904A919A12F0D956D37E8 /* PrayerIDN.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/PrayerIDN";
-			sourceTree = "<group>";
-		};
-		64B6D830297FC378E2AAD49B84CF762D /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5EE1ECA449E2E64653797F6B983E7096 /* PrayerIDN */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		701F393830FF9D3A01D4B7BC5A8E0C88 /* Pods-PrayerIDN_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -211,24 +191,29 @@
 			path = "Target Support Files/Pods-PrayerIDN_Tests";
 			sourceTree = "<group>";
 		};
-		A944A011F758EB76256E2D916CDE9FA8 /* HTTPRequest */ = {
+		7B9C16EAE7AE30D4350C0ACC63019B6F /* PrayerIDN */ = {
 			isa = PBXGroup;
 			children = (
-				B053E7EB5DC4A551DE82F1BD2A301102 /* HTTPRequest.swift */,
-				01AE6E129D0277AFA48B5A67597BF713 /* HTTPRequestHeader.swift */,
-				C756021F2266DC3A8454F7DE83E7EA35 /* HTTPRequestMethod.swift */,
+				EBA60FEABD6C06BF8181D8EA0D1D2D13 /* PrayerIDN.swift */,
+				2BE8FC790DE71D5EFA472501BF3D4B66 /* Extensions */,
+				EF80AFE0FC58E671E28D7F818E85C4FC /* HTTPRequest */,
+				A66D78AA626385AD61D0ACE86C9AC943 /* Pod */,
+				FBCC693029FCD5DDA52FF70ED2602F26 /* Support Files */,
+				E762BEC96F8566E8C6BCDF7077BE4CDE /* Utils */,
+				33EB30AEAAB16B833AE24EA84D18F47D /* Worker */,
 			);
-			name = HTTPRequest;
-			path = PrayerIDN/Src/HTTPRequest;
+			name = PrayerIDN;
+			path = ../..;
 			sourceTree = "<group>";
 		};
-		AAAD45CD25ADF0A100F52F7F /* Extensions */ = {
+		A66D78AA626385AD61D0ACE86C9AC943 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				AAAD45CE25ADF0AF00F52F7F /* String+Ext.swift */,
-				AAAD45D325ADF0C600F52F7F /* DateComponents+String.swift */,
+				D07B2267DEFF1C56E5E5C39FF8100CDC /* LICENSE */,
+				06B8F3979D10EFF228C12847DAE53F3D /* PrayerIDN.podspec */,
+				B082602F29C13EE8C5062943E19443D8 /* README.md */,
 			);
-			path = Extensions;
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		C17807962BD6698BB8464E7547D62060 /* Products */ = {
@@ -245,7 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				64B6D830297FC378E2AAD49B84CF762D /* Development Pods */,
+				36C2CAC352C0CD4552F864E355E50FFA /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				C17807962BD6698BB8464E7547D62060 /* Products */,
 				2DB003B7F1993B49A60D72FA0F16463A /* Targets Support Files */,
@@ -260,23 +245,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E637D5998672C3AD315F061637D5C0EF /* Pod */ = {
+		E762BEC96F8566E8C6BCDF7077BE4CDE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				C3810B0D1FD440C72574BE62661B6BE7 /* LICENSE */,
-				1014BC276C483BD2D1CD9C3EE4B06D5B /* PrayerIDN.podspec */,
-				4CCE7A9B94A367BF8D8E0D61293BC0B9 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		F55F74178B3214C430015AFDE62F1ECE /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				7BA01FADFD8C94217A9F689D9A96898B /* Debugger.swift */,
+				905B21DD98A3D875BD622AD49C9637A9 /* Debugger.swift */,
 			);
 			name = Utils;
 			path = PrayerIDN/Src/Utils;
+			sourceTree = "<group>";
+		};
+		EF80AFE0FC58E671E28D7F818E85C4FC /* HTTPRequest */ = {
+			isa = PBXGroup;
+			children = (
+				7ADD8AE13CF55E8D86745830C8292727 /* HTTPRequest.swift */,
+				9F8C00915431C213F996901F7883B30C /* HTTPRequestHeader.swift */,
+				E3336A39714BD3797236BDC3604BF879 /* HTTPRequestMethod.swift */,
+			);
+			name = HTTPRequest;
+			path = PrayerIDN/Src/HTTPRequest;
+			sourceTree = "<group>";
+		};
+		FBCC693029FCD5DDA52FF70ED2602F26 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				04D60C282D8B3E3AF0B070703505FCE1 /* PrayerIDN.modulemap */,
+				46D7BB6448621BF430F16AB99BDAE2EE /* PrayerIDN-dummy.m */,
+				BEE2E57417BC0A6C5EF57A8A2D5F63F3 /* PrayerIDN-Info.plist */,
+				C81BE10F11140797DC26C6A544349B92 /* PrayerIDN-prefix.pch */,
+				22920463C2FC95C7AF4BEDA4C14629ED /* PrayerIDN-umbrella.h */,
+				E2837FB1B07714035A9320C04B0C9457 /* PrayerIDN.debug.xcconfig */,
+				CBC87B1DFB0BB0EFE5C47A05B3A3B2D6 /* PrayerIDN.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/PrayerIDN";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,6 +291,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7285BA1400F09AA187178064C250A1A2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE91B1CD7BC71503B9E457FCF28DC521 /* PrayerIDN-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		81336FD1E3CBF12357CB11998A4C8FF7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -298,25 +307,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A8D6E7B176D5448387EDEB883114B609 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DC32478B20ED11A5D3F04260BCE06C7D /* PrayerIDN-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		19807B04C58C8E96A17F181FF8E737EE /* PrayerIDN */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 43EA31E8D17E1B883CD411D7BD51B82F /* Build configuration list for PBXNativeTarget "PrayerIDN" */;
+			buildConfigurationList = C6B683EA12A197A5984C3A6BF9DD66F2 /* Build configuration list for PBXNativeTarget "PrayerIDN" */;
 			buildPhases = (
-				A8D6E7B176D5448387EDEB883114B609 /* Headers */,
-				D5DAFF40B8A6C2689F462A7AD78A0E50 /* Sources */,
-				B33079F0E658E97E7D0AA1BDB36C91EC /* Frameworks */,
-				C7065142107390774434752560AD3615 /* Resources */,
+				7285BA1400F09AA187178064C250A1A2 /* Headers */,
+				8AE7CABD897D4AADA5E2161553061131 /* Sources */,
+				59DF1E5DAD006A1896E866AE06BC8864 /* Frameworks */,
+				AD7CD975F98DE67524A3A5A612B58A28 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -339,7 +340,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				512508922B469B735147A1FFB0AD4370 /* PBXTargetDependency */,
+				B1C6D27EB14C26492DFE4584900FDECA /* PBXTargetDependency */,
 			);
 			name = "Pods-PrayerIDN_Tests";
 			productName = "Pods-PrayerIDN_Tests";
@@ -358,7 +359,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				99DC649879700813B894C80033010704 /* PBXTargetDependency */,
+				91188BE8F434BF93E2048C82A0069DE3 /* PBXTargetDependency */,
 			);
 			name = "Pods-PrayerIDN_Example";
 			productName = "Pods-PrayerIDN_Example";
@@ -373,11 +374,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
-				TargetAttributes = {
-					A2131386431FC6C5818588EDC848ADC0 = {
-						LastSwiftMigration = 1220;
-					};
-				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -414,7 +410,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C7065142107390774434752560AD3615 /* Resources */ = {
+		AD7CD975F98DE67524A3A5A612B58A28 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -432,17 +428,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D5DAFF40B8A6C2689F462A7AD78A0E50 /* Sources */ = {
+		8AE7CABD897D4AADA5E2161553061131 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F46510B513B2CB0C3D672DBF9937D36 /* Debugger.swift in Sources */,
-				1CD241E700B0C61EC6462980E9E41303 /* HTTPRequest.swift in Sources */,
-				85435B340B1FDB9FB7266584B44A0CDC /* HTTPRequestHeader.swift in Sources */,
-				10055D1AD03477330B96FDC5B7F81F2A /* HTTPRequestMethod.swift in Sources */,
-				5F69E086DAE87312768FB8F651099D36 /* PrayerIDN-dummy.m in Sources */,
-				66C13B7B3F40FC054F6FB5EBD6F37B4C /* PrayerIDN.swift in Sources */,
-				D647C370109CFAE4882B2D0056E2409F /* PrayerWorker.swift in Sources */,
+				4C78CB44A2A041182983D5C596F29DB5 /* DateComponents+String.swift in Sources */,
+				54A7B7499770FAF89979828E8968B4E1 /* Debugger.swift in Sources */,
+				A9A7C656EC9BFBDDE51474E9BAA478B6 /* HTTPRequest.swift in Sources */,
+				284139D77F806B804BCB651A0031ADE2 /* HTTPRequestHeader.swift in Sources */,
+				BFE5EDBF53C3FC88369831102A37CA8E /* HTTPRequestMethod.swift in Sources */,
+				A9575FB7CA0AE4A8D76D430BBAAE6730 /* PrayerIDN-dummy.m in Sources */,
+				E4101FA194637C113B731A1B5D676D47 /* PrayerIDN.swift in Sources */,
+				5CA2B868355FBDEADB463FD9340C1B85 /* PrayerWorker.swift in Sources */,
+				BB81287F27FC5BCE9DB8D2CF7CBF2BFB /* String+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,8 +448,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAAD45CF25ADF0AF00F52F7F /* String+Ext.swift in Sources */,
-				AAAD45D425ADF0C600F52F7F /* DateComponents+String.swift in Sources */,
 				F48B73169E4A1999A4416EE16BBDB248 /* Pods-PrayerIDN_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,51 +455,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		512508922B469B735147A1FFB0AD4370 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-PrayerIDN_Example";
-			target = A2131386431FC6C5818588EDC848ADC0 /* Pods-PrayerIDN_Example */;
-			targetProxy = C6EB5F37DBA2B357C2DEC9A34A9CD988 /* PBXContainerItemProxy */;
-		};
-		99DC649879700813B894C80033010704 /* PBXTargetDependency */ = {
+		91188BE8F434BF93E2048C82A0069DE3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PrayerIDN;
 			target = 19807B04C58C8E96A17F181FF8E737EE /* PrayerIDN */;
-			targetProxy = EA027E43F46BE3A896CBF14AAE83F53C /* PBXContainerItemProxy */;
+			targetProxy = C5D654F288DC1AB802B5CBE76AC2F062 /* PBXContainerItemProxy */;
+		};
+		B1C6D27EB14C26492DFE4584900FDECA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-PrayerIDN_Example";
+			target = A2131386431FC6C5818588EDC848ADC0 /* Pods-PrayerIDN_Example */;
+			targetProxy = 0492D197A02454EF9F568F7D72817045 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		22E1F48448FED20310B3BDAEA0C8CA79 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0EE34D823A70C5756C776A9924B27C40 /* PrayerIDN.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/PrayerIDN/PrayerIDN-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PrayerIDN/PrayerIDN-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PrayerIDN/PrayerIDN.modulemap";
-				PRODUCT_MODULE_NAME = PrayerIDN;
-				PRODUCT_NAME = PrayerIDN;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -575,7 +541,6 @@
 			baseConfigurationReference = 7A91C6D42C7BF3809330017A9B564E2F /* Pods-PrayerIDN_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -597,7 +562,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -636,6 +600,67 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		63D7F9D50D3713C6383366695A17CB05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2837FB1B07714035A9320C04B0C9457 /* PrayerIDN.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PrayerIDN/PrayerIDN-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PrayerIDN/PrayerIDN-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PrayerIDN/PrayerIDN.modulemap";
+				PRODUCT_MODULE_NAME = PrayerIDN;
+				PRODUCT_NAME = PrayerIDN;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9E1F9FC9AF3111A28551C26142BD31E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBC87B1DFB0BB0EFE5C47A05B3A3B2D6 /* PrayerIDN.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PrayerIDN/PrayerIDN-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PrayerIDN/PrayerIDN-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PrayerIDN/PrayerIDN.modulemap";
+				PRODUCT_MODULE_NAME = PrayerIDN;
+				PRODUCT_NAME = PrayerIDN;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		CA547D2C7E9A8A153DC2B27FBE00B112 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -692,40 +717,10 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		CB527C9D04466E26B29FF5006C31ADE6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F93D21EB726904A919A12F0D956D37E8 /* PrayerIDN.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/PrayerIDN/PrayerIDN-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/PrayerIDN/PrayerIDN-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/PrayerIDN/PrayerIDN.modulemap";
-				PRODUCT_MODULE_NAME = PrayerIDN;
-				PRODUCT_NAME = PrayerIDN;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -734,7 +729,6 @@
 			baseConfigurationReference = 7E1A44CD795475016D8BB8077FA7E3E9 /* Pods-PrayerIDN_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -756,8 +750,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -800,15 +792,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		43EA31E8D17E1B883CD411D7BD51B82F /* Build configuration list for PBXNativeTarget "PrayerIDN" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				22E1F48448FED20310B3BDAEA0C8CA79 /* Debug */,
-				CB527C9D04466E26B29FF5006C31ADE6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -832,6 +815,15 @@
 			buildConfigurations = (
 				D51BC150373CE138347262796C2CBFF2 /* Debug */,
 				49AF04E42CD6FC2C84ACD75751881116 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6B683EA12A197A5984C3A6BF9DD66F2 /* Build configuration list for PBXNativeTarget "PrayerIDN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63D7F9D50D3713C6383366695A17CB05 /* Debug */,
+				9E1F9FC9AF3111A28551C26142BD31E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

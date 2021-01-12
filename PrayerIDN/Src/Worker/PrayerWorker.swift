@@ -22,7 +22,6 @@ internal class PrayerWorker {
         } else {
             url = URLConstant.api_sholat + "kota"
         }
-        debugLog(url)
         HTTPRequest.shared.connect(url: url, params: nil, model: CityResponse.self) { (result) in
             completion(result)
         }
@@ -30,7 +29,6 @@ internal class PrayerWorker {
     
     func getPrayerTimes(city_code: String, date: String, completion: @escaping (Result<PrayerTimesResponse, Error>) -> Void) {
         let url = URLConstant.api_sholat + "jadwal/kota/" + city_code + "/tanggal/" + date
-        debugLog(url)
         HTTPRequest.shared.connect(url: url, params: nil, model: PrayerTimesResponse.self) { (result) in
             completion(result)
         }
