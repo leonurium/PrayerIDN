@@ -28,6 +28,9 @@ class ViewController: UIViewController {
             let prayer = PrayerIDN(coordinate: PrayerIDN.Coordinate(lat: currentLoc.latitude, long: currentLoc.longitude), date: date)
             prayer.delegate = self
         }
+        
+        let quran = QuranIDN(surahNumber: 114, ayahNumber: [1,3,5,6], language: [.id, .ar])
+        quran.delegate = self
     }
 }
 
@@ -42,6 +45,16 @@ extension ViewController: PrayerDelegate {
     
     func didUpdateTimes(times: PrayerIDN.Times) {
         debugPrint(times)
+    }
+}
+
+extension ViewController: QuranIDNDelegate {
+    func didGetQuran(result: [QuranIDN.QuranChapter]) {
+        debugPrint(result)
+    }
+    
+    func failRequest(error: Error) {
+        debugPrint(error.localizedDescription)
     }
 }
 

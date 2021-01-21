@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		31A9D722A316AD0E21B08A21 /* PrayerIDN.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PrayerIDN.podspec; path = ../PrayerIDN.podspec; sourceTree = "<group>"; };
+		31A9D722A316AD0E21B08A21 /* PrayerIDN.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = PrayerIDN.podspec; path = ../PrayerIDN.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		3533473D9E25D19B9F67F4AC /* Pods_PrayerIDN_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrayerIDN_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C348DBA3A40D3D4FD6DBABC /* Pods-PrayerIDN_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrayerIDN_Tests.release.xcconfig"; path = "Target Support Files/Pods-PrayerIDN_Tests/Pods-PrayerIDN_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* PrayerIDN_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrayerIDN_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };

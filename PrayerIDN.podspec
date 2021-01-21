@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'PrayerIDN'
-  s.version          = '0.1.0'
-  s.summary          = 'PrayerIDN is SDK swift prayer time for Indonesia only.'
+  s.version          = '1.0.1'
+  s.summary          = 'PrayerIDN is SDK swift prayer time and Al-Quran for Indonesia only.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?

@@ -126,7 +126,7 @@ extension PrayerIDN: CLLocationManagerDelegate {
         if isAllowRequest {
             isAllowRequest = false
             getPlace(for: location) { (placemark) in
-                if let city = placemark?.locality {
+                if let city = placemark?.locality, placemark?.country?.lowercased() == "indonesia" {
                     self.getCode(cityName: city)
                 }
             }
