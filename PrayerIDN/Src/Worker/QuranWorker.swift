@@ -7,10 +7,6 @@
 
 import Foundation
 
-struct QuranCacheMemory {
-    static var request: [String: QuranResponse?] = [:]
-}
-
 internal class QuranWorker {
     static let shared = QuranWorker()
     
@@ -36,19 +32,24 @@ internal class QuranWorker {
             url = url + "/bahasa/" + langStr
         }
         
-        if
-            let cache = QuranCacheMemory.request[url],
-            let cacheResponse = cache {
-            let result: Result<QuranResponse, Error> = .success(cacheResponse)
-            completion(result, url)
-            return
-        }
-        
-        HTTPRequest.shared.connect(url: url, params: nil, model: QuranResponse.self) { (result) in
-            completion(result, url)
+        let disk = DiskStorage()
+        let storage = CodableStorage(storage: disk)
+        storage.fetch(for: url, object: QuranResponse.self) { (result) in
+            switch result {
+            case .failure(let err):
+                debugLog(err)
+                HTTPRequest.shared.connect(url: url, params: nil, model: QuranResponse.self) { (result) in
+                    completion(result, url)
+                    return
+                }
+                
+            case .success(let res):
+                let response: Result<QuranResponse, Error> = .success(res)
+                completion(response, url)
+                return
+            }
         }
     }
-    
 }
 
 public enum QuranLanguage: String, Codable {

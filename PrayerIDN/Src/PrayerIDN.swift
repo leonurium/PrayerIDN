@@ -66,11 +66,15 @@ public class PrayerIDN: NSObject {
     }
     
     private func getCode(cityName: String) {
-        PrayerWorker.shared.getCityCode(city: cityName) { (result) in
+        PrayerWorker.shared.getCityCode(city: cityName) { (result, urlstring)  in
             switch result {
             case .failure(let err):
                 self.delegate?.failWhenRequestApi(error: err)
             case .success(let res):
+                let disk = DiskStorage()
+                let storage = CodableStorage(storage: disk)
+                try? storage.save(res, for: urlstring)
+
                 guard
                     let date = self.requestDate.connvertToSetring(),
                     let code = res.kota.first?.id
@@ -81,11 +85,15 @@ public class PrayerIDN: NSObject {
     }
     
     private func getTimes(code: String, date: String) {
-        PrayerWorker.shared.getPrayerTimes(city_code: code, date: date) { (result) in
+        PrayerWorker.shared.getPrayerTimes(city_code: code, date: date) { (result, urlstring) in
             switch result {
             case .failure(let err):
                 self.delegate?.failWhenRequestApi(error: err)
             case .success(let res):
+                let disk = DiskStorage()
+                let storage = CodableStorage(storage: disk)
+                try? storage.save(res, for: urlstring)
+
                 guard
                     let fajrDate = res.jadwal.data.subuh.convertToDate(),
                     let sunriseDate = res.jadwal.data.terbit.convertToDate(),

@@ -29,7 +29,7 @@ class ViewController: UIViewController {
             prayer.delegate = self
         }
         
-        let quran = QuranIDN(surahNumber: 114, ayahNumber: [1,3,5,6], language: [.id, .ar])
+        let quran = QuranIDN(surahNumber: 114, ayahNumber: [1,2,3,4,5,6], language: [.id, .ar])
         quran.delegate = self
     }
 }

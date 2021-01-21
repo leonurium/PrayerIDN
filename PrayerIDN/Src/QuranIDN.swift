@@ -51,8 +51,11 @@ public class QuranIDN {
             switch result {
             case .failure(let err):
                 self.delegate?.failRequest(error: err)
+                
             case .success(let res):
-                QuranCacheMemory.request[urlstring] = res
+                let disk = DiskStorage()
+                let storage = CodableStorage(storage: disk)
+                try? storage.save(res, for: urlstring)
                 
                 var chapter: QuranChapter = QuranChapter(id: 0, name: "", nameArabic: "", place: "", verses_count: 0, verses: [])
                 
@@ -71,7 +74,7 @@ public class QuranIDN {
                 for index in 0...totalRequestAyat {
                     var quranLang = QuranVerseLanguage(indonesia: nil, english: nil, arabic: nil)
                     var verse = QuranVerse(id: 0, chapter_id: 0, verse: "", verse_locale: quranLang)
-                    debugLog(index)
+
                     if let ayat = res.ayat.data.id?[safe: index],
                        let ayat_id = Int(ayat.ayat),
                        let surah_id = Int(ayat.surat) {

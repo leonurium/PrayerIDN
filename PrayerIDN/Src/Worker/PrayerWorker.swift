@@ -10,22 +10,52 @@ import Foundation
 internal class PrayerWorker {
     static let shared = PrayerWorker()
     
-    func getCityCode(city: String? = nil, completion: @escaping (Result<CityResponse, Error>) -> Void) {
+    func getCityCode(city: String? = nil, completion: @escaping (Result<CityResponse, Error>, _ urlstring: String) -> Void) {
         var url: String = ""
         if let _city = city?.lowercased().replacingOccurrences(of: " ", with: "+") {
             url = URLConstant.api_sholat + "kota/nama/" + _city
         } else {
             url = URLConstant.api_sholat + "kota"
         }
-        HTTPRequest.shared.connect(url: url, params: nil, model: CityResponse.self) { (result) in
-            completion(result)
+        
+        let disk = DiskStorage()
+        let storage = CodableStorage(storage: disk)
+        storage.fetch(for: url, object: CityResponse.self) { (result) in
+            switch result {
+            case .failure(let err):
+                debugLog(err)
+                HTTPRequest.shared.connect(url: url, params: nil, model: CityResponse.self) { (result) in
+                    completion(result, url)
+                    return
+                }
+                
+            case .success(let res):
+                let response: Result<CityResponse, Error> = .success(res)
+                completion(response, url)
+                return
+            }
         }
     }
     
-    func getPrayerTimes(city_code: String, date: String, completion: @escaping (Result<PrayerTimesResponse, Error>) -> Void) {
+    func getPrayerTimes(city_code: String, date: String, completion: @escaping (Result<PrayerTimesResponse, Error>, _ urlstring: String) -> Void) {
         let url = URLConstant.api_sholat + "jadwal/kota/" + city_code + "/tanggal/" + date
-        HTTPRequest.shared.connect(url: url, params: nil, model: PrayerTimesResponse.self) { (result) in
-            completion(result)
+        
+        let disk = DiskStorage()
+        let storage = CodableStorage(storage: disk)
+        storage.fetch(for: url, object: PrayerTimesResponse.self) { (result) in
+            switch result {
+            case .failure(let err):
+                debugLog(err)
+                HTTPRequest.shared.connect(url: url, params: nil, model: PrayerTimesResponse.self) { (result) in
+                    completion(result, url)
+                    return
+                }
+                
+            case .success(let res):
+                let response: Result<PrayerTimesResponse, Error> = .success(res)
+                completion(response, url)
+                return
+            }
         }
     }
 }
