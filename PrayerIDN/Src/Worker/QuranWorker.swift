@@ -105,4 +105,57 @@ struct QuranAyat: Codable {
     let id, surat, ayat, teks: String
 }
 
+extension QuranResponse {
+    func buildQuranChapter() -> QuranIDN.QuranChapter {
+        let res = self
+        var chapter: QuranIDN.QuranChapter = QuranIDN.QuranChapter(id: 0, name: "", nameArabic: "", place: "", verses_count: 0, verses: [])
+        
+        if let chapter_id = Int(res.surat.nomor),
+           let verseCount = Int(res.surat.ayat) {
+            chapter.id = chapter_id
+            chapter.verses_count = verseCount
+            chapter.name = res.surat.name
+            chapter.nameArabic = res.surat.asma
+            chapter.place = res.surat.type
+        }
+        
+        var verses: [QuranIDN.QuranVerse] = []
+        let totalRequestAyat = res.ayat.proses.count - 1
+        
+        for index in 0...totalRequestAyat {
+            var quranLang = QuranIDN.QuranVerseLanguage(indonesia: nil, english: nil, arabic: nil)
+            var verse = QuranIDN.QuranVerse(id: 0, chapter_id: 0, verse: "", verse_locale: quranLang)
+
+            if let ayat = res.ayat.data.id?[safe: index],
+               let ayat_id = Int(ayat.ayat),
+               let surah_id = Int(ayat.surat) {
+                quranLang.indonesia = ayat.teks
+                verse.id = ayat_id
+                verse.chapter_id = surah_id
+            }
+            
+            if let ayat = res.ayat.data.en?[safe: index],
+               let ayat_id = Int(ayat.ayat),
+               let surah_id = Int(ayat.surat) {
+                quranLang.english = ayat.teks
+                verse.id = ayat_id
+                verse.chapter_id = surah_id
+            }
+            
+            if let ayat = res.ayat.data.ar?[safe: index],
+               let ayat_id = Int(ayat.ayat),
+               let surah_id = Int(ayat.surat) {
+                quranLang.arabic = ayat.teks
+                verse.id = ayat_id
+                verse.chapter_id = surah_id
+                verse.verse = ayat.teks
+            }
+            verse.verse_locale = quranLang
+            verses.append(verse)
+        }
+        
+        chapter.verses.append(contentsOf: verses)
+        return chapter
+    }
+}
 

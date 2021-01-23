@@ -1,5 +1,5 @@
 PODS:
-  - PrayerIDN (1.0.1)
+  - PrayerIDN (1.1.1)
 
 DEPENDENCIES:
   - PrayerIDN (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  PrayerIDN: 4b396f9177066a5df3a96a99daea352bacb3476b
+  PrayerIDN: 68b15ce9f54874610f4d3a99a83eb200eea5532e
 
 PODFILE CHECKSUM: 6a16694c5cf0eeb69c417685c490e26935d232d2
 

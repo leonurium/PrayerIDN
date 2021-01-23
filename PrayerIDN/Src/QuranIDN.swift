@@ -18,12 +18,12 @@ public class QuranIDN {
             lhs.id == rhs.id
         }
         
-        var id: Int
-        var name: String
-        var nameArabic: String
-        var place: String
-        var verses_count: Int
-        var verses: [QuranVerse]
+        public var id: Int
+        public var name: String
+        public var nameArabic: String
+        public var place: String
+        public var verses_count: Int
+        public var verses: [QuranVerse]
     }
     
     public struct QuranVerse: Equatable {
@@ -31,16 +31,16 @@ public class QuranIDN {
             lhs.id == rhs.id
         }
         
-        var id: Int
-        var chapter_id: Int
-        var verse: String
-        var verse_locale: QuranVerseLanguage
+        public var id: Int
+        public var chapter_id: Int
+        public var verse: String
+        public var verse_locale: QuranVerseLanguage
     }
     
     public struct QuranVerseLanguage {
-        var indonesia: String?
-        var english: String?
-        var arabic: String?
+        public var indonesia: String?
+        public var english: String?
+        public var arabic: String?
     }
     
     public weak var delegate: QuranIDNDelegate?
@@ -57,56 +57,11 @@ public class QuranIDN {
                 let storage = CodableStorage(storage: disk)
                 try? storage.save(res, for: urlstring)
                 
-                var chapter: QuranChapter = QuranChapter(id: 0, name: "", nameArabic: "", place: "", verses_count: 0, verses: [])
+                let chapter: QuranChapter = res.buildQuranChapter()
                 
-                if let chapter_id = Int(res.surat.nomor),
-                   let verseCount = Int(res.surat.ayat) {
-                    chapter.id = chapter_id
-                    chapter.verses_count = verseCount
-                    chapter.name = res.surat.name
-                    chapter.nameArabic = res.surat.asma
-                    chapter.place = res.surat.type
-                }
-                
-                var verses: [QuranVerse] = []
-                let totalRequestAyat = res.ayat.proses.count - 1
-                
-                for index in 0...totalRequestAyat {
-                    var quranLang = QuranVerseLanguage(indonesia: nil, english: nil, arabic: nil)
-                    var verse = QuranVerse(id: 0, chapter_id: 0, verse: "", verse_locale: quranLang)
-
-                    if let ayat = res.ayat.data.id?[safe: index],
-                       let ayat_id = Int(ayat.ayat),
-                       let surah_id = Int(ayat.surat) {
-                        quranLang.indonesia = ayat.teks
-                        verse.id = ayat_id
-                        verse.chapter_id = surah_id
-                    }
-                    
-                    if let ayat = res.ayat.data.en?[safe: index],
-                       let ayat_id = Int(ayat.ayat),
-                       let surah_id = Int(ayat.surat) {
-                        quranLang.english = ayat.teks
-                        verse.id = ayat_id
-                        verse.chapter_id = surah_id
-                    }
-                    
-                    if let ayat = res.ayat.data.ar?[safe: index],
-                       let ayat_id = Int(ayat.ayat),
-                       let surah_id = Int(ayat.surat) {
-                        quranLang.arabic = ayat.teks
-                        verse.id = ayat_id
-                        verse.chapter_id = surah_id
-                        verse.verse = ayat.teks
-                    }
-                    verse.verse_locale = quranLang
-                    verses.append(verse)
-                }
-                
-                chapter.verses.append(contentsOf: verses)
                 if self.quran.contains(chapter),
                    let index = self.quran.firstIndex(of: chapter) {
-                    for verse in verses {
+                    for verse in chapter.verses {
                         if !self.quran[index].verses.contains(verse) {
                             self.quran[index].verses.append(verse)
                         }
