@@ -8,8 +8,10 @@
 import Foundation
 
 public protocol QuranIDNDelegate: class {
-    func failRequest(error: Error)
-    func didGetQuran(result: [QuranIDN.QuranChapter])
+    func didGetVerse(chapter: QuranIDN.QuranChapter)
+    func failGetVerse(error: Error)
+    func didGetChapter(chapters: [QuranIDN.QuranChapter])
+    func failGetChapter(error: Error)
 }
 
 public class QuranIDN {
@@ -44,42 +46,39 @@ public class QuranIDN {
     }
     
     public weak var delegate: QuranIDNDelegate?
-    private var quran: [QuranChapter] = []
     
-    public init(surahNumber: Int? = nil, ayahNumber: [Int] = [], language: [QuranLanguage] = []) {
-        QuranWorker.shared.getQuran(surahNumber: surahNumber, ayahNumber: ayahNumber, language: language) { (result, urlstring) in
+    public init() {}
+    
+    public func getChapter(chapter_id: Int? = nil) {
+        QuranWorker.shared.getSurah(surahNumber: chapter_id) { (result, urlstring) in
             switch result {
-            case .failure(let err):
-                self.delegate?.failRequest(error: err)
+            case .failure(let error):
+                self.delegate?.failGetChapter(error: error)
                 
             case .success(let res):
                 let disk = DiskStorage()
                 let storage = CodableStorage(storage: disk)
                 try? storage.save(res, for: urlstring)
                 
-                let chapter: QuranChapter = res.buildQuranChapter()
+                let chapters: [QuranChapter] = res.buildQuranChapter()
+                self.delegate?.didGetChapter(chapters: chapters)
+            }
+        }
+    }
+    
+    public func getVerse(chapter_id: Int, verse_ids: [Int], language: [QuranLanguage] = []) {
+        QuranWorker.shared.getAyat(surahNumber: chapter_id, ayahNumber: verse_ids, language: language) { (result, urlstring) in
+            switch result {
+            case .failure(let error):
+                self.delegate?.failGetVerse(error: error)
                 
-                if self.quran.contains(chapter),
-                   let index = self.quran.firstIndex(of: chapter) {
-                    for verse in chapter.verses {
-                        if !self.quran[index].verses.contains(verse) {
-                            self.quran[index].verses.append(verse)
-                        }
-                    }
-                    
-                    self.quran[index].verses.sort(by: {
-                        $0.id < $1.id
-                    })
-                    
-                } else {
-                    self.quran.append(chapter)
-                }
+            case .success(let res):
+                let disk = DiskStorage()
+                let storage = CodableStorage(storage: disk)
+                try? storage.save(res, for: urlstring)
                 
-                self.quran.sort(by: {
-                    $0.id < $1.id
-                })
-                
-                self.delegate?.didGetQuran(result: self.quran)
+                let chapter: QuranChapter = res.buildQuranVerse()
+                self.delegate?.didGetVerse(chapter: chapter)
             }
         }
     }

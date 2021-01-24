@@ -10,8 +10,7 @@ import Foundation
 internal class QuranWorker {
     static let shared = QuranWorker()
     
-    
-    func getQuran(surahNumber: Int? = nil, ayahNumber: [Int] = [], language: [QuranLanguage] = [], completion: @escaping (Result<QuranResponse, Error>, _ urlString: String) -> Void) {
+    func getSurah(surahNumber: Int? = nil, completion: @escaping (Result<QuranSurahResponse, Error>, _ urlstring: String) -> Void) {
         var url = URLConstant.api_quran + "surat"
         
         if let surah = surahNumber {
@@ -19,14 +18,42 @@ internal class QuranWorker {
             url = url + "/" + surahStr
         }
         
+        let disk = DiskStorage()
+        let storage = CodableStorage(storage: disk)
+        storage.fetch(for: url, object: QuranSurahResponse.self) { (result) in
+            switch result {
+            case .failure(let err):
+                debugLog("cache disk", err.localizedDescription)
+                HTTPRequest.shared.connect(url: url, params: nil, model: QuranSurahResponse.self) { (result) in
+                    completion(result, url)
+                    return
+                }
+                
+            case .success(let res):
+                let response: Result<QuranSurahResponse, Error> = .success(res)
+                completion(response, url)
+                return
+            }
+        }
+    }
+    
+    func getAyat(surahNumber: Int, ayahNumber: [Int], language: [QuranLanguage] = [], completion: @escaping (Result<QuranAyahResponse, Error>, _ urlString: String) -> Void) {
+        var url = URLConstant.api_quran + "surat"
+        let surahStr = String(describing: surahNumber)
+        url = url + "/" + surahStr
+        
         if ayahNumber.count > 0 {
             let mutatingAyahs = ayahNumber.sorted()
             let ayahStrings: [String] = mutatingAyahs.map{( String(describing: $0) )}
             let ayahStr = ayahStrings.joined(separator: ",")
             url = url + "/ayat/" + ayahStr
+        } else {
+            let err = NSError(domain: "must input ayah number, at least one ayah", code: 1, userInfo: nil)
+            completion(.failure(err), url)
+            return
         }
         
-        if language.count > 0 {
+        if ayahNumber.count > 0 && language.count > 0 {
             let langStrings: [String] = language.map({ $0.rawValue })
             let langStr = langStrings.joined(separator: ",")
             url = url + "/bahasa/" + langStr
@@ -34,17 +61,17 @@ internal class QuranWorker {
         
         let disk = DiskStorage()
         let storage = CodableStorage(storage: disk)
-        storage.fetch(for: url, object: QuranResponse.self) { (result) in
+        storage.fetch(for: url, object: QuranAyahResponse.self) { (result) in
             switch result {
             case .failure(let err):
-                debugLog(err)
-                HTTPRequest.shared.connect(url: url, params: nil, model: QuranResponse.self) { (result) in
+                debugLog("cache disk", err.localizedDescription)
+                HTTPRequest.shared.connect(url: url, params: nil, model: QuranAyahResponse.self) { (result) in
                     completion(result, url)
                     return
                 }
                 
             case .success(let res):
-                let response: Result<QuranResponse, Error> = .success(res)
+                let response: Result<QuranAyahResponse, Error> = .success(res)
                 completion(response, url)
                 return
             }
@@ -64,7 +91,13 @@ public enum QuranLanguage: String, Codable {
     case idt // indonesia transliterasi
 }
 
-struct QuranResponse: Codable {
+struct QuranSurahResponse: Codable {
+    let status: String
+    let query: RequestQuery
+    let hasil: [QuranSurat]
+}
+
+struct QuranAyahResponse: Codable {
     let status: String
     let query: RequestQuery
     let bahasa: QuranLanguageRequest
@@ -105,8 +138,30 @@ struct QuranAyat: Codable {
     let id, surat, ayat, teks: String
 }
 
-extension QuranResponse {
-    func buildQuranChapter() -> QuranIDN.QuranChapter {
+extension QuranSurahResponse {
+    func buildQuranChapter() -> [QuranIDN.QuranChapter] {
+        let res = self
+        var chapters: [QuranIDN.QuranChapter] = []
+        
+        for surat in res.hasil {
+            var chapter = QuranIDN.QuranChapter(id: 0, name: "", nameArabic: "", place: "", verses_count: 0, verses: [])
+            if let chapter_id = Int(surat.nomor),
+               let verseCount = Int(surat.ayat) {
+                chapter.id = chapter_id
+                chapter.verses_count = verseCount
+                chapter.name = surat.name
+                chapter.nameArabic = surat.asma
+                chapter.place = surat.type
+            }
+            chapters.append(chapter)
+        }
+        
+        return chapters
+    }
+}
+
+extension QuranAyahResponse {
+    func buildQuranVerse() -> QuranIDN.QuranChapter {
         let res = self
         var chapter: QuranIDN.QuranChapter = QuranIDN.QuranChapter(id: 0, name: "", nameArabic: "", place: "", verses_count: 0, verses: [])
         

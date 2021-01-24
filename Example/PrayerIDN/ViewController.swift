@@ -29,8 +29,10 @@ class ViewController: UIViewController {
             prayer.delegate = self
         }
         
-        let quran = QuranIDN(surahNumber: 114, ayahNumber: [1,2,3,4,5,6], language: [.id, .ar])
+        let quran = QuranIDN()
         quran.delegate = self
+//        quran.getVerse(chapter_id: 113, verse_ids: [1,2,3])
+        quran.getChapter()
     }
 }
 
@@ -49,12 +51,19 @@ extension ViewController: PrayerDelegate {
 }
 
 extension ViewController: QuranIDNDelegate {
-    func didGetQuran(result: [QuranIDN.QuranChapter]) {
-        debugPrint(result)
+    func didGetChapter(chapters: [QuranIDN.QuranChapter]) {
+        print(chapters)
     }
     
-    func failRequest(error: Error) {
-        debugPrint(error.localizedDescription)
+    func failGetChapter(error: Error) {
+        print(error.localizedDescription)
+    }
+    
+    func didGetVerse(chapter: QuranIDN.QuranChapter) {
+        print(chapter)
+    }
+
+    func failGetVerse(error: Error) {
+        print(error.localizedDescription)
     }
 }
-
